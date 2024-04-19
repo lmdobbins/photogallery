@@ -31,6 +31,7 @@ h1 {
 h2 {
     font-size: 2em;
     text-transform: uppercase;
+    text-align: center;
 }
 h3 {
     font-size: 0px;
@@ -48,26 +49,22 @@ main {
     background-color: var(--white);
 }
 #gallery {
-    padding-left: 10px;
-    padding-right: 10px;
     display:grid;
     grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: center;
 }
 #gallery h2 {
     grid-column: 1/-1;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 #gallery p {
     grid-column: 1/-1;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 #about {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 [href="#top"] {
     position: fixed;
@@ -87,29 +84,30 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 30px;
 }
-img {
+figure {
     position: relative;
 }
 .top {
-    position: relative;
-    top: 0px;
-    margin: 0 auto;
-
+    position: absolute;
+    top: 10px;
 }
 .bottom {
-    position: relative;
-    bottom: 0px;
-    margin: 0 auto;
+    position: absolute;
+    bottom: 10px;
 }
 .black {
     color: var(--black);
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .white {
     color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
 }
 #contact {
     background-color: var(--black);
-    padding: 10px;
+    padding: 5px;
     color: var(--white);
     margin: 0 auto;
     text-align: center;
@@ -127,12 +125,15 @@ label {
 input {
     padding: 10px;
 }
-input [type="submit"] {
+.submit-btn {
     background-color: var(--teal);
     color: var(--white);
     text-transform: uppercase;
     font-weight: bold;
-    padding: 10px 50px;
+    width: 250px;
+    border-radius: 16px;
+    border: none;
+    margin: 20px auto;
 }
 ::placeholder {
     color: var(--teal);
@@ -160,5 +161,12 @@ footer {
     }
     body {
         width: 1300px;
+    }
+    ul {
+        display: flex;
+        justify-content: right;
+    }
+    a {
+        padding-left: 15px;
     }
 }
